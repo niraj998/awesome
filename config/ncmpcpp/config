@@ -1,0 +1,56 @@
+# Directories #
+ncmpcpp_directory = "~/.config/ncmpcpp"
+lyrics_directory = "~/.local/share/lyrics"
+mpd_music_dir = "~/Music"
+
+# behaviour #
+execute_on_song_change = "sh $HOME/.config/ncmpcpp/awesome"
+message_delay_time = "1"
+external_editor = nvim
+use_console_editor = yes
+display_volume_level = yes
+ignore_leading_the = yes
+centered_cursor = "no"
+autocenter_mode = "no"
+header_visibility = "no"
+statusbar_visibility     = "no"
+
+# Visualizer #
+visualizer_data_source = /tmp/mpd.fifo
+visualizer_output_name = "mpd_visualizer"
+visualizer_in_stereo = "yes"
+visualizer_look = ◉◉
+visualizer_color = cyan, green, cyan, green, cyan, green, cyan, green, cyan, green
+visualizer_type = "spectrum"
+visualizer_spectrum_smooth_look = "yes"
+
+# Progress #
+progressbar_look = "▄▄▄"
+progressbar_color = black:b
+progressbar_elapsed_color = blue:b
+colors_enabled = "yes"
+
+# Song list #
+song_list_format = "  %t $R%a %l  "
+song_columns_list_format = "(60)[blue]{t}  (30)[white]{a} (10)[blue]{lr}"
+song_library_format = {{%a - %t} (%b)}|{%f}
+
+current_item_prefix = $(blue)$r$b
+current_item_suffix = $/r$(end)$/b
+current_item_inactive_column_prefix = $(magenta)$r
+current_item_inactive_column_suffix = $/r$(end)
+
+empty_tag_color = magenta
+main_window_color = white
+statusbar_color = blue
+statusbar_time_color = blue:b
+
+playlist_display_mode = columns
+browser_display_mode = columns
+
+media_library_primary_tag = album_artist
+media_library_albums_split_by_date = no
+
+startup_screen = "media_library"
+
+clock_display_seconds = yes

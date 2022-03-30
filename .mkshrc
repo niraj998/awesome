@@ -1,0 +1,15 @@
+function _cd {
+  \cd "$@"
+  PS1=$(
+  	print -n "\033[34m "
+  	if [[ "${PWD#$HOME}" != "$PWD" ]]; then
+       print -n "~${PWD#$HOME}"
+     else
+       print -n "$PWD"
+     fi
+      print -n " $ \033[00m"
+  )
+}
+
+alias cd=_cd
+cd "$PWD"
