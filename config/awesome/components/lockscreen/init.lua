@@ -15,7 +15,7 @@ local password
 if user and user.lock_screen_password then
   password = user.lock_screen_password
 else
-  password = "7798"
+  password = "awesome"
 end
 
 
