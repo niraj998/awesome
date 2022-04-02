@@ -11,6 +11,8 @@ if term == 'st' then
 termclass = term .. " -c"
 end
 
+local home = os.getenv("HOME")
+
 return {
 -- Apps
     -- use same classes as below for terminal.
@@ -21,7 +23,7 @@ return {
     mpd =                     termclass .. ' music ncmpcpp',
     musicalt =                'spotify',
     editor =                  term .. ' nvim',
-    run =                     'rofi -show drun',
+    run =                     'rofi -config ' .. home .. '/.config/awesome/assets/configs/config.rasi  -show drun',
     browser =                 'brave',
     files =                   'thunar',
     bluetooth =               'blueberry',

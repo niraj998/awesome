@@ -138,9 +138,9 @@ theme.taglist_text_color_urgent   = { theme.red, theme.red, theme.orange, theme.
 theme.taglist_text_color_empty    = { theme.yellow, theme.yellow, theme.yellow, theme.yellow, theme.yellow, theme.yellow, theme.yellow, theme.yellow, theme.yellow, theme.yellow }
 theme.taglist_text_color_focused    = { theme.yellow, theme.yellow, theme.yellow, theme.yellow, theme.yellow, theme.yellow, theme.yellow, theme.yellow, theme.yellow, theme.yellow }
 -- colorful ghosts
-theme.taglist_text_color_occupied    = { theme.red, theme.purple, theme.green, theme.yellow, theme.purple, theme.red, theme.green, theme.purple, theme.red, theme.green }
+--theme.taglist_text_color_occupied    = { theme.red, theme.purple, theme.green, theme.yellow, theme.purple, theme.red, theme.green, theme.purple, theme.red, theme.green }
 -- blue ghosts
---theme.taglist_text_color_occupied    = { theme.blue, theme.blue, theme.blue, theme.blue, theme.blue, theme.blue, theme.blue, theme.blue, theme.blue, theme.blue }
+theme.taglist_text_color_occupied    = { theme.blue, theme.blue, theme.blue, theme.blue, theme.blue, theme.blue, theme.blue, theme.blue, theme.blue, theme.blue }
 
 
 -- Old Taglist

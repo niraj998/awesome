@@ -33,7 +33,7 @@ require("components.notify")
 -- notification center
 require("components.notify.center")
 
--- lockscreen
+-- lockscreen, password is awesome. you can change that in the lockscreen.lua file
 require("components.lockscreen")
 
 -- exitscreen

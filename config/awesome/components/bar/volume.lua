@@ -8,7 +8,7 @@ local apps = require("config.apps")
 -- left click to open volume management application like, pavucontrol or pulsemixer.
 -- right click to toggle mute.
 -- scroll up/down to increase/decrease volume.
--- note volume widget only updates when you scroll on it. or use keyboard shortcuts.
+-- note volume widget only updates when you do any of the above things. or use keyboard shortcuts to control volume.
 
 -- widget components
 local volicon = wibox.widget.textbox()
@@ -28,7 +28,7 @@ sb_volume = function()
          volperc.markup = "<span foreground = '" .. beautiful.red .. "'>M</span>"
       else
          volperc.text = vol .. "%"
-         awful.spawn.easy_async_with_shell('pacmd list-sinks | grep "active port" | grep headphone > /dev/null && echo headphones' , function(out)
+         awful.spawn.easy_async_with_shell('pactl list sinks | grep "Active Port" | grep headphone > /dev/null && echo headphones' , function(out)
            if string.match(out, "headphones") then
              volicon.text = ''
            else
