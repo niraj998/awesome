@@ -30,7 +30,7 @@ Apart from awesome window manager I use following programs.
 ## Setup
 
 - Install Dependencies
-  ```shell
+  ```sh
   yay -Sy awesome-git pulseaudio pamixer mpc mpd ncmpcpp playerctl xorg-xbacklight \
   xdotool --needed
   ```
@@ -38,7 +38,7 @@ Apart from awesome window manager I use following programs.
 
    Move your old configurations to separate location and copy configs to your ~/.config
 
-    ```shell
+    ```sh
    git clone  https://github.com/niraj998/awesome.git
    cd awesome
    [ -d "$HOME/.config/awesome" ] && mv $HOME/.config/awesome $HOME/.config/Bkpawesome
@@ -48,7 +48,7 @@ Apart from awesome window manager I use following programs.
    cp -r ncmpcpp $HOME/.config/
   ```
 - Install all fonts from fonts folder
-    ```shell
+    ```sh
     cd ..
     cp -r fonts $HOME/.local/share/fonts
     fc-cache -fv
