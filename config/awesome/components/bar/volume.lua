@@ -20,15 +20,26 @@ volperc.font = beautiful.uifont .. " 13"
 
 -- widget function.
 sb_volume = function()
-  awful.spawn.easy_async_with_shell('pamixer --get-volume' , function(stdout)
+
+-- pulse, pipewire
+  getvol=[[ pamixer --get-volume ]]
+  getmute=[[ pamixer --get-mute ]]
+
+-- alsa 
+  -- Uncomment following lines for alsa, if doesn't show properly adjust '{print $5}' and '{print $6}'
+  -- getvol=[[ amixer get Master | awk '$0~/%/{print $5}' | tr -d '[%]' | head -1 ]]
+  -- getmute=[[ amixer get Master | awk '$0~/%/{print $6}' | tr -d '[]' | grep 'on' >/dev/null || echo true ]]
+
+  awful.spawn.easy_async_with_shell(getvol , function(stdout)
     local vol = tonumber(stdout)
-    awful.spawn.easy_async_with_shell('pamixer --get-mute' , function(out)
+    awful.spawn.easy_async_with_shell(getmute , function(out)
       if string.match(out, "true") then
          volicon.markup = "<span foreground = '" .. beautiful.red .. "'>婢</span>"
          volperc.markup = "<span foreground = '" .. beautiful.red .. "'>M</span>"
       else
          volperc.text = vol .. "%"
-         awful.spawn.easy_async_with_shell('pactl list sinks | grep "Active Port" | grep headphone > /dev/null && echo headphones' , function(out)
+	 -- pactl command can be used without pulseaudio running, with libpulse package. so this should work for both pipewire and pulseaudio.
+         awful.spawn.easy_async_with_shell('LANG=C pactl list sinks | grep "Active Port" | grep headphone > /dev/null && echo headphones' , function(out)
            if string.match(out, "headphones") then
              volicon.text = ''
            else

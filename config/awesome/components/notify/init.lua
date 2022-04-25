@@ -249,6 +249,14 @@ do
   )
 end
 
+-- Create a notification sound
+naughty.connect_signal(
+    'request::display',
+    function(n)
+      awful.spawn.with_shell('canberra-gtk-play -i message')
+    end
+)
+
 function log_this(title, txt)
   naughty.notify(
     {

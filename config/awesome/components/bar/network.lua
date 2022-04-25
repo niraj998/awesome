@@ -118,7 +118,7 @@ return wibox.widget {
                 widget = wibox.container.background
           },
           wibox.widget{
-                markup = "<span foreground='"..beautiful.blue.."'><b>❘</b></span>",
+                markup = "<span foreground='"..beautiful.blue.."'><b>|</b></span>",
                 font =  beautiful.uifont .. " 12",
                 widget = wibox.widget.textbox
           },

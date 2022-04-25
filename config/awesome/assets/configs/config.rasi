@@ -7,9 +7,15 @@ configuration {
     matching: "fuzzy";
     scroll-method: 0;
 //    monitor: "primary";
+    disable-history:      true;
     modi: "window,run,ssh,drun,combi";
     combi-hide-mode-prefix: true;
     combi-modi: "drun,ssh,keys,run";
+
+filebrowser {
+  directories-first:    true;
+  sorting-method:       "name";
+  }
 }
 
 
@@ -43,7 +49,7 @@ prompt {
 button {
     action: "ok";
     str: " ";
-    font: "FantasqueSansMono Nerd Font 16";
+    font: "FiraCode Nerd Font 16";
     expand: false;
     text-color: @fg;
     background-color: @bgalt;

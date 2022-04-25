@@ -67,6 +67,11 @@ globalkeys = gears.table.join(
   awful.key({ alt, }, "F6", function ()
         awful.spawn.with_shell("sh -c '$HOME/.config/rofi/screen/screen' ")         end,
             {description = "Screen", group = "Custom"}),
+  awful.key({ modkey, "Shift" }, "e", function ()
+        awful.spawn.with_shell("rofi -config $HOME/.config/awesome/assets/configs/config.rasi -show filebrowser")         end,
+            {description = "Screen", group = "Custom"}),
+
+
 
 --|C|l|i|e|n|t|s|--
 --+-+-+-+-+-+-+-+--

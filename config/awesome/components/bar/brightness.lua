@@ -20,7 +20,7 @@ briperc.font = beautiful.uifont .. " 13"
 -- update icons and percentage
 function sb_brightness()
 awful.spawn.easy_async_with_shell('xbacklight -get | cut -d "." -f1 || echo 0 ' , function(stdout)
-  briperc.text= tonumber(stdout)
+  briperc.text= tonumber(stdout) or 0
     end)
 end
 

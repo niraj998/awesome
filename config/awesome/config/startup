@@ -7,4 +7,3 @@ start() {
   fi }
 
 start picom --experimental-backends --config $HOME/.config/awesome/assets/configs/picom.conf
-start mpd

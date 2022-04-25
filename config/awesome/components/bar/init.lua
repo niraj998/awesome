@@ -100,7 +100,7 @@ local power = wibox.widget{
 }
 
 -- Time
-local time = wibox.widget.textclock("<span font='" .. beautiful.uifont .. " 12'>%d %b (%a) ❘ %H:%M </span>",60)
+local time = wibox.widget.textclock("<span font='" .. beautiful.uifont .. " 12'>%d %b (%a) | %H:%M </span>",60)
 -- }})
 
 

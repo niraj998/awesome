@@ -14,6 +14,7 @@ local theme = dofile(themes_path.."default/theme.lua")
 -- Fonts
 theme.iconfont = 'FiraCode Nerd Font '
 theme.uifont = 'FiraSans '
+--theme.uifont = 'Digital-7 '
 theme.font = theme.iconfont .. " 12"
 
 -- Colors --
