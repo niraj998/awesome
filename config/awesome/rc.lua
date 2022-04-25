@@ -18,7 +18,7 @@ file structure of whole configurations are as follows:
 
 -- all commands in awesome config will run in this shell
 -- awful.util.shell = 'dash'
-awful.util.shell = 'dash'
+awful.util.shell = 'sh'
 
 -- Import theme
 beautiful.init(getfs.get_configuration_dir() .. "theme/theme.lua")

@@ -30,8 +30,8 @@ return {
     volumeapp  =              'pavucontrol',
 
 -- Power
-    power =                   'shutdown now',
-    restart =                 'reboot',
+    power =                   'sudo shutdown -P now',
+    restart =                 'sudo reboot',
     suspend =                 'systemctl suspend',
 
 -- updates
